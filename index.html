@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Gourmet & Spa - Política de Privacidad</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      margin: 2rem;
+      background-color: #fdfcf9;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      color: #2e4a2d;
+    }
+    select {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Política de Privacidad</h1>
+    <p><strong>Cultural Gourmet & Spa</strong></p>
+    <select id="language" onchange="changeLanguage()">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="pt">Português</option>
+    </select>
+  </header>
+
+  <main id="content">
+    <p>
+      Esta Política de Privacidad describe cómo <strong>Cultural Gourmet & Spa</strong> recopila, usa y protege la información personal de los usuarios. 
+      Los datos se tratan de acuerdo con la legislación vigente sobre protección de datos en la Unión Europea y otros países donde opera la aplicación.
+    </p>
+    <p>
+      Puede contactarnos en: <a href="mailto:culturalgourmetspa@gmail.com">culturalgourmetspa@gmail.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <p><em>“Filtra y Disfruta la Experiencia”</em></p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: "This Privacy Policy explains how Cultural Gourmet & Spa collects, uses, and protects users' personal data according to applicable laws.",
+      fr: "Cette politique de confidentialité explique comment Cultural Gourmet & Spa collecte, utilise et protège les données personnelles des utilisateurs.",
+      it: "Questa politica sulla privacy spiega come Cultural Gourmet & Spa raccoglie, utilizza e protegge i dati personali degli utenti.",
+      pt: "Esta política de privacidade explica como Cultural Gourmet & Spa coleta, usa e protege os dados pessoais dos usuários.",
+      es: "Esta Política de Privacidad describe cómo Cultural Gourmet & Spa recopila, usa y protege la información personal de los usuarios."
+    };
+    function changeLanguage() {
+      const lang = document.getElementById('language').value;
+      document.getElementById('content').innerHTML = `<p>${translations[lang]}</p><p>Contacto: <a href='mailto:culturalgourmetspa@gmail.com'>culturalgourmetspa@gmail.com</a></p>`;
+    }
+  </script>
+</body>
+</html>
